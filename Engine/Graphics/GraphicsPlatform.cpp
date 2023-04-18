@@ -22,6 +22,9 @@ set_platform_interface(graphics_platform platform, platform_interface& pi)
     case graphics_platform::vulkan_1:
         vulkan::get_platform_interface(pi);
         break;
+    case graphics_platform::opengl:
+        opengl::get_platform_interface(pi);
+        break;
     default:
         return false;
     }
